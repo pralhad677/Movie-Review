@@ -5,13 +5,14 @@ import Main from '../main/Main';
 
 interface LayoutProps {
   children: React.ReactNode; // Define the type of the 'children' prop
+  style?:string
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children,style }) => {
   return (
     <div className="layout">
       <Header />
-      <Main children={children}></Main>
+      <Main children={children}  ></Main>
       <Footer />
     </div>
   );

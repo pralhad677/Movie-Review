@@ -8,10 +8,14 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Contact from './layout/contact/Contact';
+import Contact from './layout/Category/Category';
 import Layout from './layout/layout/Layout';
-import About from './layout/about/About';
+ 
 import NotFound from './layout/Error/Error';
+import Category from './layout/Category/Category';
+import Recommended from './layout/Recommended/Recommended';
+import News from './layout/News/News';
+import NewsLetter from './layout/NewsLetter/NewsLetter';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -22,13 +26,21 @@ const router = createBrowserRouter([
     element:  <App />,
   },
   {
-path:"/about",
-element:<Layout><About /></Layout>
+path:"/category",
+element:<Layout><Category /></Layout>
   },
   {
-    path:"/contact",
-    element:<Layout><Contact /></Layout>
+    path:"/recommended",
+    element:<Layout><Recommended /></Layout>
       },
+      {
+        path:"/news",
+        element:<Layout><News /></Layout>
+          },
+          {
+            path:"/newsLetter",
+            element:<Layout><NewsLetter /></Layout>
+              },
   {
     path:"*",
     element:<NotFound />

@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-function Footer() {
+interface FooterProps {} // Empty interface for now (can be expanded if needed)
+
+const Footer: React.FC<FooterProps> = () => {
   return (
-    <div>
-      <h1>Footer</h1>
-    </div>
-  )
-}
+    <footer className=" fixed bottom-0 rounded-lg3  w-full bg-gray-800 text-white py-4 px-8 flex justify-center items-center">
+      <p>Copyright &copy; {new Date().getFullYear()} Your Company Name</p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
