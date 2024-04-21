@@ -7,7 +7,7 @@ interface MainProps {
 
 const  Main: React.FC<MainProps> = ({children,style})=>{
   return (
-    <div id="main" className='h-screen overflow-y-auto bg-gray-200 '> 
+    <div   className='h-screen overflow-y-auto bg-gray-200 '> 
     
         <main  className='mt-24'>{children}</main>
     </div>

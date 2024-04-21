@@ -23,7 +23,7 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: "/",
-    element:  <App />,
+    element: <Layout><App /></Layout>,  
   },
   {
 path:"/category",
@@ -47,12 +47,12 @@ element:<Layout><Category /></Layout>
   }
 ]);
 root.render(
-  <React.StrictMode>
+ 
     <ErrorBoundary>
 
     <RouterProvider router={router} />
     </ErrorBoundary>
-  </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
